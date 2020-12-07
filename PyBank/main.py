@@ -40,12 +40,17 @@ with open(csvpath) as csvfile:
     str5=("Greatest Loss: $" + str(lowest) + " in " + str(lossmonth))
     
     textlist = [str1, str2, str3, str4, str4]
+    print("Financial Analysis")
+    print("---------------------")
     for line in textlist:
         print(line)
        
     output_file = 'C:\\python-challenge\\PyBank\\analysis\\ProfitLoss_analysis.txt'
     
     with open (output_file, "w", newline="\n") as datafile:
+        datafile.write("Financial Analysis")
+        datafile.write("\n")
+        datafile.write("\n")
         for line in textlist:
             datafile.write(line)
             datafile.write("\n")
